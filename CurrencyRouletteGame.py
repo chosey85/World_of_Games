@@ -1,7 +1,7 @@
 import requests
 import json
 import random
-import GeneralFunctions
+import Utils
 
 
 def generate_number():
@@ -40,7 +40,7 @@ def compare_guess_to_act(guessed_usd, act_usd, difficulty):
 
 
 def play():
-    difficulty = GeneralFunctions.get_difficulty()
+    difficulty = Utils.get_difficulty()
     amount_in_usd = generate_number()
     amount_in_ils = get_usd_to_ils_curr(amount_in_usd)
     guessed_amount = get_guess_from_user(amount_in_usd)

@@ -1,5 +1,5 @@
 import random
-import GeneralFunctions
+import Utils
 
 
 def generate_number(difficulty):
@@ -33,7 +33,7 @@ def compare_results(secret_number, guess):
 
 
 def play():
-    selected_difficulty = GeneralFunctions.get_difficulty()
+    selected_difficulty = Utils.get_difficulty()
     generated_secret_number = generate_number(selected_difficulty)
     user_guess = get_guess_from_user(selected_difficulty)
     results = compare_results(generated_secret_number, user_guess)

@@ -1,6 +1,6 @@
 import random
 import time
-import GeneralFunctions
+import Utils
 
 
 def generate_sequence(difficulty):
@@ -30,12 +30,12 @@ def is_list_equal(list1, list2):
 
 
 def play():
-    selected_difficulty = GeneralFunctions.get_difficulty()
+    selected_difficulty = Utils.get_difficulty()
     generated_sequence = generate_sequence(selected_difficulty)
     print('\nTry to memorize the following sequence: ')
     print(generated_sequence)
     time.sleep(0.7)
-    GeneralFunctions.clear_screen()
+    Utils.clear_screen()
     print('\nPlease write now all the numbers you\'ve seen according to their order')
     user_list = get_list_from_user(selected_difficulty)
     result = is_list_equal(generated_sequence, user_list)
