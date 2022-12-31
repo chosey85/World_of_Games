@@ -53,9 +53,6 @@ def play():
         print('You lost')
 
 
-play()
-
-
 
 
 

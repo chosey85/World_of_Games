@@ -1,5 +1,6 @@
 import os
 
+
 def get_difficulty():
     attempt = 0
     while attempt < 3:
