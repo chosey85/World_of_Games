@@ -1,5 +1,5 @@
 from pathlib import Path
-import Utils
+from etc import Utils
 
 
 def score_init():
