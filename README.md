@@ -14,6 +14,7 @@ The following python modules should be installed in order to run the program:
  - requests
  - json
  - os
+ - currency_converter
 
 ## The Games:
 
