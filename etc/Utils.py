@@ -23,5 +23,9 @@ def clear_screen():
         os.system('clear')
 
 
-scores_file_name = 'scores.txt'
-bad_return_code = 666
+def scores_file_name(file_name='scores.txt'):
+    return file_name
+
+
+def bad_return_code(code=666):
+    return code

@@ -1,7 +1,9 @@
 import requests
 import json
 import random
+from currency_converter import CurrencyConverter
 from etc import Utils
+from scoring import Score
 
 
 def generate_number():
@@ -10,19 +12,27 @@ def generate_number():
 
 
 def get_usd_to_ils_curr(total_amount):
-    response = requests.get(
-        f'https://api.apilayer.com/exchangerates_data/convert?', params={
-            'to': 'ILS',
-            'from': 'USD',
-            'amount': total_amount
-        },
-        headers={
-            'apikey': 'bXAdeMFnc1fT0TNADmnnvkgYOmuudxtN'
-        }
-    )
+    converter = CurrencyConverter()
+    ils_amount = converter.convert(total_amount, 'USD', 'ILS')
+    return ils_amount
 
-    data = json.loads(response.text)
-    return data["result"]
+
+# another option to do the currency conversion using API
+#
+# def get_usd_to_ils_curr(total_amount):
+#     response = requests.get(
+#         f'https://api.apilayer.com/exchangerates_data/convert?', params={
+#             'to': 'ILS',
+#             'from': 'USD',
+#             'amount': total_amount
+#         },
+#         headers={
+#             'apikey': 'bXAdeMFnc1fT0TNADmnnvkgYOmuudxtN'
+#         }
+#     )
+#
+#     data = json.loads(response.text)
+#     return data["result"]
 
 
 def get_guess_from_user(usd):
@@ -49,10 +59,9 @@ def play():
     result = compare_guess_to_act(int(guessed_amount), int(amount_in_ils), int(difficulty))
     if result:
         print('You won')
+        Score.add_score(difficulty)
     else:
         print('You lost')
-
-
 
 
 

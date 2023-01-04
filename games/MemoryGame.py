@@ -1,5 +1,6 @@
 import random
 import time
+from scoring import Score
 from etc import Utils
 
 
@@ -41,6 +42,7 @@ def play():
     result = is_list_equal(generated_sequence, user_list)
     if result:
         print(f'\nYou Won :) The generated sequence was indeed {generated_sequence}')
+        Score.add_score(selected_difficulty)
     else:
         print(f'\nYou Lost :( The generated sequence was {generated_sequence}, while yours was {user_list}')
 

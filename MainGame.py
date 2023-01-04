@@ -1,4 +1,4 @@
-from live import welcome, load_game
+from etc.live import welcome, load_game
 
 name = input('Hi! Please enter your name: ')
 welcome(name)

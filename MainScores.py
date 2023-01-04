@@ -7,8 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     try:
-        score_file = open(Utils.scores_file_name, "r")
+        score_file = open(Utils.scores_file_name(), "r")
         score_value = score_file.read()
+        print(score_value)
         data = f'''<html>
                   <head>
                     <title>Scores Game</title>

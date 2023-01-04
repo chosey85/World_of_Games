@@ -1,5 +1,6 @@
 import random
 from etc import Utils
+from scoring import Score
 
 
 def generate_number(difficulty):
@@ -11,7 +12,7 @@ def get_guess_from_user(difficulty):
     attempt = 0
     options = range(1, difficulty)
     guess = input(f'Please select a number between 1 to {difficulty}: ')
-    while (not guess.isnumeric() and attempt < 3) or (guess not in options and attempt < 3):
+    while (not guess.isnumeric() and attempt < 3) and (int(guess) not in options and attempt < 3):
         print(f'''The value you provided is not legal
                          Please make sure to follow these guidelines:
                          1. Value must be a number
@@ -25,7 +26,7 @@ def get_guess_from_user(difficulty):
 
 
 def compare_results(secret_number, guess):
-    if secret_number == guess:
+    if int(secret_number) == int(guess):
         return True
     else:
         return False
@@ -38,11 +39,10 @@ def play():
     results = compare_results(generated_secret_number, user_guess)
     if results:
         print(f'\nYou Won :) The secret number is indeed {generated_secret_number}!')
+        Score.add_score(selected_difficulty)
     else:
         print(f'\nYou lost :( The secret number is {generated_secret_number}, while you selected {user_guess}.')
 
-
-get_guess_from_user(3)
 
 
 
