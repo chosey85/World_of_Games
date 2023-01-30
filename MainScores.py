@@ -1,5 +1,5 @@
 from flask import Flask
-from etc import Utils
+import Utils
 
 app = Flask(__name__)
 

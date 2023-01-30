@@ -1,5 +1,5 @@
 import random
-from etc import Utils
+import Utils
 from scoring import Score
 
 

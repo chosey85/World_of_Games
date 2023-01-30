@@ -1,8 +1,6 @@
-import requests
-import json
 import random
 from currency_converter import CurrencyConverter
-from etc import Utils
+import Utils
 from scoring import Score
 
 

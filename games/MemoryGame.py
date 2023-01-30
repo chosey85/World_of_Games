@@ -1,7 +1,7 @@
 import random
 import time
 from scoring import Score
-from etc import Utils
+import Utils
 
 
 def generate_sequence(difficulty):
