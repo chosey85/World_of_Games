@@ -8,8 +8,10 @@ WebDriver BiDi listening on ws://127.0.0.1:58672
 1675108958000	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofileQG2wNx\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:58672/devtools/browser/f5d2d57f-b158-4079-9582-27d12523ebca
-1675109178736	geckodriver	INFO	Listening on 127.0.0.1:56519
-1675109181799	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56520" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofileehCEzx"
+1675113367966	Marionette	INFO	Stopped listening on port 63951
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofileehCEzx"
 1675109182263	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
 1675109182270	Marionette	INFO	Listening on port 60345
@@ -264,8 +266,10 @@ WebDriver BiDi listening on ws://127.0.0.1:62644
 1675109250303	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofileaVID7t\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:62644/devtools/browser/bd90d8d7-9701-40e9-a10f-81294a882e07
-1675109300344	geckodriver	INFO	Listening on 127.0.0.1:53157
-1675109303408	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53158" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofile100CL8"
+1675113350669	Marionette	INFO	Stopped listening on port 50407
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nirra\\AppData\\Local\\Temp\\rust_mozprofile100CL8"
 1675109303916	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
 1675109303925	Marionette	INFO	Listening on port 57160
