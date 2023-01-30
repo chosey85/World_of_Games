@@ -1,8 +1,11 @@
-FROM python:alpine
+FROM python:3.8-alpine
 
-RUN mkdir -p etc
-ADD etc/utils.py etc/utils.py
-ADD scores.txt .
-ADD MainScores.py .
+WORKDIR /app
 
-CMD ["python3", "./MainScores.py"]
+COPY Utils.py .
+COPY scores.txt .
+COPY MainScores.py .
+
+RUN pip install flask
+
+CMD ["python", "MainScores.py"]
