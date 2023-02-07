@@ -3,7 +3,8 @@ services:
   world-of-games-mainscores:
     build:
       context: .
+    image: chosey85/worldofgames:wog
     ports:
-      - "5000:8777"
+      - "8777:5000"
 
 
