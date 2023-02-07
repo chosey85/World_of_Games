@@ -1,0 +1,9 @@
+version: '3'
+services:
+  world-of-games-mainscores:
+    build:
+      context: .
+    ports:
+      - "5000:8777"
+
+

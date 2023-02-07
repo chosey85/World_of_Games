@@ -22,7 +22,7 @@ def test_scores_service(app_url):
 
 
 def main_function():
-    result = test_scores_service('http://127.0.0.1:5000/')
+    result = test_scores_service('http://127.0.0.1:8777/')
     if result:
         return sys.exit(0)
     else:
